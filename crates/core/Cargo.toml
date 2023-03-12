@@ -9,14 +9,13 @@ license.workspace = true
 name = "javy_core"
 path = "src/main.rs"
 
-[lib]
-name = "javy_quickjs_provider"
-crate-type = ["cdylib"]
-
 [dependencies]
 anyhow = { workspace = true }
 quickjs-wasm-rs = { path = "../quickjs-wasm-rs" }
 once_cell = { workspace = true }
-
-[features]
-experimental_event_loop = []
+http = "0.2"
+bytes = "1.4.0"
+serde = "1.0.137"
+serde_bytes = "0.11"
+send_wrapper = "0.6.0"
+wit-bindgen-rust = { git = "https://github.com/bytecodealliance/wit-bindgen", rev = "cb871cfa1ee460b51eb1d144b175b9aab9c50aba" }

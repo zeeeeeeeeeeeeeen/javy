@@ -1,0 +1,24 @@
+[package]
+name = "javy-runtime"
+version = "0.0.1"
+edition = "2021"
+
+[[bin]]
+name = "runjs"
+path = "src/main.rs"
+
+[dependencies]
+wizer = "1.6.0"
+structopt = "0.3"
+anyhow = "1.0"
+tempfile = "3.2.0"
+binaryen = { git = "https://github.com/pepyakin/binaryen-rs" }
+bytes                = "1"
+futures              = "0.3"
+http                 = "0.2"
+reqwest              = { version = "0.11", default-features = true, features = [ "json", "blocking" ] }
+tokio                = { version = "1.4.0", features = [ "full" ] }
+url                  = "2.2.1"
+wasmtime-wasi = { workspace = true }
+wasmtime = { workspace = true }
+wit-bindgen-wasmtime = { git = "https://github.com/fermyon/wit-bindgen-backport", rev = "bb33644" }
